@@ -3,8 +3,17 @@ import java.util.List;
 public interface IElevadorService {
 	
 	/** Deve retornar uma List contendo o(s) andar(es) menos utilizado(s). */
-	List<Integer> andarMenosUtilizado();
-	
+    List<Integer> andarMenosUtilizado() {
+        int andares[] = new int[15];
+        //populando o array de andares.
+        for (int i = 0; i <= 15; i++) {
+        andares[i] = i;
+        }           
+        
+        for (int elemento : andares) {
+            System.out.println(elemento);
+        }
+    }
 	/** Deve retornar uma List contendo o(s) elevador(es) mais frequentado(s). */
 	List<Character> elevadorMaisFrequentado();
 	

@@ -4,6 +4,8 @@
  */
 package elevadorservice;
 
+import java.util.List;
+
 /**
  * Suponha que a administração do prédio 99a da Tecnopuc, com 16 andares e cinco elevadores, denominados A, B, C, D e E, nos convidou a aperfeiçoar o sistema de controle dos elevadores.
  * Depois de realizado um levantamento no qual cada usuário respondia:
@@ -54,12 +56,24 @@ public class Elevador {
     public String getTurno() {
         return turno;
     }
-    
+    /*
     @Override
     public String toString() {
         return "Elevador{" + "andar=" + andar + ", elevador=" + elevador + ", turno=" + turno + '}';
-    }    
-/*void elevadorMaisFrequentado() {
+    }*/
+
+void andarMenosUtilizado() {
+    int andares[] = new int[15];
+    //populando o array de andares.
+    for (int i = 0; i <= 15; i++) {
+        andares[i] = i;
+    }
+    for (int elemento : andares) {
+        System.out.println(elemento);
+    }
+}
+
+void elevadorMaisFrequentado() {
     String maisFrequentado;
     int A=0, B=0, C=0, D=0, E=0;
     
@@ -68,7 +82,7 @@ public class Elevador {
     }else if (elevador == "B"){
         B++;
     }else if (elevador == "C") {
-        C++;        
+        C++;
     }else if (elevador == "D") {
         D++;
     }else if (elevador == "E") {
@@ -80,5 +94,5 @@ public class Elevador {
 void elevadorMenosFrequentado() {
     System.out.println("Elevador menos frequentado: " + this.elevador);
 }
-*/
+
 }

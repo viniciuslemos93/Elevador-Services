@@ -24,6 +24,12 @@ public class ElevadorService {
      */
     public static void main(String[] args) {
         // Andar, elevador e turno.
+        Elevador ele = new Elevador();
+        
+        ele.andarMenosUtilizado();
+        
+        
+        /* Lendo o arquivo JSON.
         JSONObject jSONObject;
         JSONParser parser = new JSONParser();
         
@@ -44,7 +50,7 @@ public class ElevadorService {
             e.printStackTrace();
         } catch (ParseException ex) {
             Logger.getLogger(ElevadorService.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }*/
     }
     
 }
